@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee1d63dc8843548a2188dc6624828f, type: 3}
+  m_Name: Snake
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.035
+  dialogues:
+  - hasAChoice: 0
+    lines:
+    - "\xBFTu mam\xE1 nunca limpia esta casa? "
+    - Voy a tener que prepararla YO para el velorio.
+  - hasAChoice: 0
+    lines:
+    - "Yo no confiar\xEDa en esa mosquita muerta que est\xE1 en el ba\xF1o. "
+    - "A\xFAn asi, es culpa de mi hermano por escogerla."
+  - hasAChoice: 0
+    lines:
+    - "Sssiempre se sabe lo que es cierto, y yo no sss\xE9, pero ese sssapo y esa
+      zorra se me hacen sospechososss."
+  npcName: Serpiente
+  npcPortraitPhase1: {fileID: 21300000, guid: f4de84a66b57a304782e4718589cfbf0, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 626ec47114e837347954fbee98b7e6bf, type: 3}
