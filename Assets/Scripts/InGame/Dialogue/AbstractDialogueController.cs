@@ -9,9 +9,6 @@ public abstract class AbstractDialogueController : MonoBehaviour
     [SerializeField] protected int currentDialogueIndex = 0;
     [SerializeField, Tooltip("Index of the last dialogue available in phase 1. Only necessary if it depends on the phase")] protected int lastIndexPhase1;
 
-    // === Properties ===
-    public int LastIndexPhase1 => lastIndexPhase1;
-
     // === Abstract Methods ===
     public abstract void UpdateDialogueIndex();
 

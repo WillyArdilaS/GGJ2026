@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
         GameManager.instance.State = GameManager.GameState.ShowingDialogue;
     }
 
-    public void StartNpcDialogue(AbstractDialogueController dialogueController, NPCDialogueController.PortraitSide portraitSide, NPCDialogueData dialogueData, 
+    public void StartNpcDialogue(AbstractDialogueController dialogueController, NPCDialogueController.PortraitSide portraitSide, NPCDialogueData dialogueData,
     int dialogueIndex)
     {
         if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return;
@@ -128,13 +128,9 @@ public class DialogueManager : MonoBehaviour
     {
         StopCoroutine(typeLineRoutine);
 
-        // Manage dialogue count
         currentDialogueController.UpdateDialogueIndex();
-        if(currentDialogueController is NPCDialogueController)
-        {
-            if (dialogueIndex == currentDialogueController.LastIndexPhase1) GameManager.instance.PhaseManager.UpdateInteractionsPhase1();
-        }
-        
+        GameManager.instance.State = GameManager.GameState.Playing;
+
         // Reset dialogue and UI variables
         currentDialogueData = null;
         dialogueIndex = -1;
@@ -144,8 +140,6 @@ public class DialogueManager : MonoBehaviour
         portraitImg.sprite = null;
         nameText.text = "";
         dialogueText.text = "";
-
-        GameManager.instance.State = GameManager.GameState.Playing;
     }
 
     // === Button Methods ===

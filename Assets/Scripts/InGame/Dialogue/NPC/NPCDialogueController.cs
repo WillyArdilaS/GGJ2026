@@ -3,6 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class NPCDialogueController : AbstractDialogueController
 {
+    // === Phase 1 Validation ===
+    private bool hasRecordedInteraction = false;
+
     // === NPC Sprite ===
     public enum PortraitSide { Left, Right }
     [SerializeField] private PortraitSide portraitSide;
@@ -27,6 +30,8 @@ public class NPCDialogueController : AbstractDialogueController
 
     public override void UpdateDialogueIndex()
     {
+        if (currentDialogueIndex == lastIndexPhase1 && !hasRecordedInteraction) RecordInteraction();
+        
         if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
         {
             currentDialogueIndex++;
@@ -40,5 +45,11 @@ public class NPCDialogueController : AbstractDialogueController
     void Update()
     {
         if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
+    }
+
+    private void RecordInteraction()
+    {
+        GameManager.instance.PhaseManager.UpdateInteractionsPhase1();
+        hasRecordedInteraction = true;
     }
 }

@@ -8,8 +8,9 @@ public class PhaseManager : MonoBehaviour
     [SerializeField] private CurrentPhase currentPhase = CurrentPhase.Phase1;
 
     // === Phase 1 Management ===
-    [SerializeField] private int currentInteractionsPhase1 = 0;
-    [SerializeField] private int maxInteractionsPhase1;
+    [Header("Phase 1")]
+    [SerializeField] private int currentInteractions = 0;
+    [SerializeField] private int totalInteractions;
 
     // === Events ===
     public event Action Phase1Completed;
@@ -20,8 +21,8 @@ public class PhaseManager : MonoBehaviour
 
     public void UpdateInteractionsPhase1()
     {
-        currentInteractionsPhase1++;
-        if (currentInteractionsPhase1 >= maxInteractionsPhase1) StartPhase2();
+        currentInteractions++;
+        if (currentInteractions >= totalInteractions) StartPhase2();
     }
 
     private void StartPhase2()
