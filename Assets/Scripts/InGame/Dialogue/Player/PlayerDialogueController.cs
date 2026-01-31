@@ -1,34 +1,28 @@
 using UnityEngine;
 
-public class PlayerDialogueController : MonoBehaviour
+public class PlayerDialogueController : AbstractDialogueController
 {
-    // === Dialogue Data ===
-    [SerializeField] private PlayerDialogueData dialogueData;
-
     // === Dialogue Index ===
     [SerializeField] private bool dependsOnPhase;
-    [SerializeField, Tooltip("Index of the last dialogue available in phase 1. Only necessary if it depends on the phase")] private int lastIndexPhase1;
-    private int currentDialogueIndex = 0;
 
-    // === Properties ===
-    public int CurrentDialogueIndex => currentDialogueIndex;
-
-    void OnMouseDown()
+    // === Overridden Abstract Methods ===
+    protected override void OnMouseDown()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        base.OnMouseDown();
 
-        if (GameManager.instance.DialogueManager.StartPlayerDialogue(dialogueData, currentDialogueIndex)) UpdateDialogueIndex();
+        PlayerDialogueData playerDialogueData = dialogueData as PlayerDialogueData;
+        GameManager.instance.DialogueManager.StartPlayerDialogue(this, playerDialogueData, currentDialogueIndex);
     }
 
-    private void UpdateDialogueIndex()
+    public override void UpdateDialogueIndex()
     {
         if (dependsOnPhase)
         {
-            if (GameManager.instance.Phase == GameManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
+            if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
             {
                 currentDialogueIndex++;
             }
-            else if (GameManager.instance.Phase == GameManager.CurrentPhase.Phase2 && currentDialogueIndex < dialogueData.Dialogues.Length - 1)
+            else if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase2 && currentDialogueIndex < dialogueData.Dialogues.Length - 1)
             {
                 currentDialogueIndex++;
             }

@@ -625,7 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialogueData: {fileID: 11400000, guid: a6645204b153fcf49bee126ce59d5686, type: 2}
+  dialogueData: {fileID: 0}
+  currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 1
 --- !u!1 &519420028
@@ -1056,6 +1057,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &898333125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898333126}
+  - component: {fileID: 898333127}
+  m_Layer: 0
+  m_Name: PhaseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &898333126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898333125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1275872879}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898333127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898333125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1707cddce14b1747a2accfbc13d31bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPhase: 0
+  currentInteractionsPhase1: 0
+  maxInteractionsPhase1: 1
 --- !u!1 &945689414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1076523826
 Transform:
   m_ObjectHideFlags: 0
@@ -1428,7 +1476,7 @@ GameObject:
   - component: {fileID: 1191049709}
   - component: {fileID: 1191049710}
   - component: {fileID: 1191049712}
-  - component: {fileID: 1191049711}
+  - component: {fileID: 1191049713}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -1495,8 +1543,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: edf724c0365413f40a0b62f9db524eec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 21300000, guid: 396b0518a1b21ab419bb0bb8bb94d89e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1506,21 +1554,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1191049711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191049708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce774f0db947369438245de41609eb50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: 8daa9b9a384d8d241976408e041b1408, type: 2}
-  dependsOnPhase: 1
-  lastIndexPhase1: 1
 --- !u!61 &1191049712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1567,6 +1600,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.46, y: 8.17}
   m_EdgeRadius: 0
+--- !u!114 &1191049713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191049708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce774f0db947369438245de41609eb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueData: {fileID: 11400000, guid: 8daa9b9a384d8d241976408e041b1408, type: 2}
+  currentDialogueIndex: 0
+  lastIndexPhase1: 1
+  dependsOnPhase: 1
 --- !u!1 &1233071615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1722,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 898333126}
   - {fileID: 1164487057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1689,7 +1739,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
-  currentPhase: 0
 --- !u!1 &1335940226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,7 +2124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialogueData: {fileID: 11400000, guid: 0982c996870d5b742a3edf52e5e7c7ca, type: 2}
+  dialogueData: {fileID: 11400000, guid: 0982c996870d5b742a3edf52e5e7c7ca, type: 2}
+  currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 1
 --- !u!61 &1412544112
@@ -2136,6 +2186,7 @@ GameObject:
   - component: {fileID: 1426856963}
   - component: {fileID: 1426856962}
   - component: {fileID: 1426856961}
+  - component: {fileID: 1426856964}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -2170,7 +2221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialogueData: {fileID: 11400000, guid: 8891b9cff402e844192b9fe31d408fef, type: 2}
+  dialogueData: {fileID: 0}
+  currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 1
 --- !u!61 &1426856962
@@ -2274,6 +2326,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1426856964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426856959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27fe215a05f7bf49ab95ab4d6511382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase1: {fileID: 0}
+  imagePhase2: {fileID: 0}
 --- !u!1 &1458358816
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,8 +2488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 8c70ac86a22aaac4788910696b21c0a4, type: 2}
-  dependsOnPhase: 0
+  currentDialogueIndex: 0
   lastIndexPhase1: 0
+  dependsOnPhase: 0
 --- !u!1 &1459342131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,7 +3125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017783748
 Transform:
   m_ObjectHideFlags: 0
@@ -3225,7 +3292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialogueData: {fileID: 11400000, guid: 5ed3631ab12a22f47b2de34711d95c33, type: 2}
+  dialogueData: {fileID: 0}
+  currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 0
 --- !u!1660057539 &9223372036854775807

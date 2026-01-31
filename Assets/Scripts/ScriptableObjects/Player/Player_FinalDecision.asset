@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01061c7bea4ac404f80f46fc16a3e35e, type: 3}
   m_Name: Player_FinalDecision
   m_EditorClassIdentifier: 
-  characterName: 
   typingSpeed: 0.035
   dialogues:
   - hasAChoice: 0
     lines:
     - Uno de ustedes no es de la familia, es un impostor.
-    - "Ese impostor es la persona con la m\xE1scara de\u2026"
+    - Es la persona...
+    - "con la m\xE1scara de\u2026"
