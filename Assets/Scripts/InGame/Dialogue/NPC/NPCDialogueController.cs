@@ -1,26 +1,20 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class NPCDialogueController : MonoBehaviour
+public class NPCDialogueController : AbstractDialogueController
 {
-    // === Dialogue Data ===
-    [SerializeField] private NPCDialogueData npcDialogueData;
-
-    // === Dialogue Index ===
-    [SerializeField, Tooltip("Index of the last dialogue available in phase 1")] private int lastIndexPhase1;
-    private int currentDialogueIndex = 0;
+    // === Phase 1 Validation ===
+    private bool hasRecordedInteraction = false;
 
     // === NPC Sprite ===
     public enum PortraitSide { Left, Right }
     [SerializeField] private PortraitSide portraitSide;
     private SpriteRenderer spriteRend;
 
-    // === Properties ===
-    public int CurrentDialogueIndex => currentDialogueIndex;
-
     void Awake()
     {
         spriteRend = GetComponent<SpriteRenderer>();
+        GameManager.instance.PhaseManager.Phase1Completed += () => currentDialogueIndex++;
     }
 
     void Update()
@@ -28,26 +22,34 @@ public class NPCDialogueController : MonoBehaviour
         if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
     }
 
-    void OnMouseDown()
+    // === Overridden Abstract Methods ===
+    protected override void OnMouseDown()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        base.OnMouseDown();
 
-        if (GameManager.instance.DialogueManager.StartNpcDialogue(portraitSide, npcDialogueData, currentDialogueIndex))
+        NPCDialogueData npcDialogueData = dialogueData as NPCDialogueData;
+        GameManager.instance.DialogueManager.StartNpcDialogue(this, portraitSide, npcDialogueData, currentDialogueIndex);
+
+        spriteRend.enabled = false;
+    }
+
+    public override void UpdateDialogueIndex()
+    {
+        if (currentDialogueIndex == lastIndexPhase1 && !hasRecordedInteraction) RecordInteraction();
+
+        if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
         {
-            spriteRend.enabled = false;
-            UpdateDialogueIndex();
+            currentDialogueIndex++;
+        }
+        else if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase2 && currentDialogueIndex < dialogueData.Dialogues.Length - 1)
+        {
+            currentDialogueIndex++;
         }
     }
 
-    private void UpdateDialogueIndex()
+    private void RecordInteraction()
     {
-        if (GameManager.instance.Phase == GameManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
-        {
-            currentDialogueIndex++;
-        }
-        else if (GameManager.instance.Phase == GameManager.CurrentPhase.Phase2 && currentDialogueIndex < npcDialogueData.Dialogues.Length - 1)
-        {
-            currentDialogueIndex++;
-        }
+        GameManager.instance.PhaseManager.UpdateInteractionsPhase1();
+        hasRecordedInteraction = true;
     }
 }

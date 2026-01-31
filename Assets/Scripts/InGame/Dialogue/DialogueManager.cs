@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private RectTransform portraitRectTransform;
 
     // === Dialogue ===
+    private AbstractDialogueController currentDialogueController;
     private DialogueData currentDialogueData;
     private int dialogueIndex = -1;
     private int lineIndex = -1;
@@ -44,12 +45,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     // === Dialogue Methods ===
-    public bool StartPlayerDialogue(PlayerDialogueData dialogueData, int dialogueIndex)
+    public void StartPlayerDialogue(AbstractDialogueController dialogueController, PlayerDialogueData dialogueData, int dialogueIndex)
     {
-        if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return false;
-        if (dialogueData.Dialogues[dialogueIndex].Lines.Length == 0) return false;
+        if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return;
+        if (dialogueData.Dialogues[dialogueIndex].Lines.Length == 0) return;
 
         // Initialize global dialogue variables
+        currentDialogueController = dialogueController;
         currentDialogueData = dialogueData;
         this.dialogueIndex = dialogueIndex;
         lineIndex = 0;
@@ -65,16 +67,16 @@ public class DialogueManager : MonoBehaviour
 
         StartTypingAnimation();
         GameManager.instance.State = GameManager.GameState.ShowingDialogue;
-
-        return true;
     }
 
-    public bool StartNpcDialogue(NPCDialogueController.PortraitSide portraitSide, NPCDialogueData dialogueData, int dialogueIndex)
+    public void StartNpcDialogue(AbstractDialogueController dialogueController, NPCDialogueController.PortraitSide portraitSide, NPCDialogueData dialogueData,
+    int dialogueIndex)
     {
-        if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return false;
-        if (dialogueData.Dialogues[dialogueIndex].Lines.Length == 0) return false;
+        if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return;
+        if (dialogueData.Dialogues[dialogueIndex].Lines.Length == 0) return;
 
         // Initialize global dialogue variables
+        currentDialogueController = dialogueController;
         currentDialogueData = dialogueData;
         this.dialogueIndex = dialogueIndex;
         lineIndex = 0;
@@ -84,7 +86,7 @@ public class DialogueManager : MonoBehaviour
         new(rightPortraitXPos, portraitRectTransform.anchoredPosition.y);
         portraitRectTransform.anchoredPosition = portraitPosition;
 
-        portraitImg.sprite = (GameManager.instance.Phase == GameManager.CurrentPhase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
+        portraitImg.sprite = (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
         portrait.SetActive(portraitImg.sprite != null);
 
         nameBox.SetActive(true);
@@ -97,8 +99,6 @@ public class DialogueManager : MonoBehaviour
 
         StartTypingAnimation();
         GameManager.instance.State = GameManager.GameState.ShowingDialogue;
-        
-        return true;
     }
 
     public void ShowNextLine()
@@ -128,6 +128,10 @@ public class DialogueManager : MonoBehaviour
     {
         StopCoroutine(typeLineRoutine);
 
+        currentDialogueController.UpdateDialogueIndex();
+        GameManager.instance.State = GameManager.GameState.Playing;
+
+        // Reset dialogue and UI variables
         currentDialogueData = null;
         dialogueIndex = -1;
         lineIndex = -1;
@@ -136,8 +140,6 @@ public class DialogueManager : MonoBehaviour
         portraitImg.sprite = null;
         nameText.text = "";
         dialogueText.text = "";
-
-        GameManager.instance.State = GameManager.GameState.Playing;
     }
 
     // === Button Methods ===

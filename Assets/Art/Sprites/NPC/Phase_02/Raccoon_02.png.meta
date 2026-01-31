@@ -1,34 +1,16 @@
 fileFormatVersion: 2
-guid: edf724c0365413f40a0b62f9db524eec
+guid: 93d7f54c2dce9dd45baed717d5b1a06b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4214149858688995037
-    second: Clock_0
+      213: -1211446625723326948
+    second: Raccoon_02_0
   - first:
-      213: 7792039334551005206
-    second: Clock_1
+      213: 6954648886208823730
+    second: Raccoon_02_1
   - first:
-      213: 8606200704858056018
-    second: Clock_2
-  - first:
-      213: -2833443924174910728
-    second: Clock_3
-  - first:
-      213: 8661856177940741680
-    second: Clock_4
-  - first:
-      213: 1587909880103496020
-    second: Clock_5
-  - first:
-      213: -1080258143134175639
-    second: Clock_6
-  - first:
-      213: 2727448449320395306
-    second: Clock_7
-  - first:
-      213: -1750754219065920
-    second: Clock_8
+      213: 5532310756017947991
+    second: Raccoon_02_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clock_0
+      name: Raccoon_02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 208
-        width: 245
-        height: 604
+        y: 0
+        width: 226
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dde8b6d08faab7a30800000000000000
-      internalID: 4214149858688995037
+      spriteID: c1e5a6166b3103fe0800000000000000
+      internalID: -1211446625723326948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clock_1
+      name: Raccoon_02_1
       rect:
         serializedVersion: 2
-        x: 30
-        y: 171
-        width: 8
-        height: 76
+        x: 279
+        y: 111
+        width: 463
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 618a8c3ad72e22c60800000000000000
-      internalID: 7792039334551005206
+      spriteID: 2b10b009050e38060800000000000000
+      internalID: 6954648886208823730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clock_2
+      name: Raccoon_02_2
       rect:
         serializedVersion: 2
-        x: 56
-        y: 190
-        width: 130
-        height: 324
+        x: 216
+        y: 26
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,140 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 255e7c681fd5f6770800000000000000
-      internalID: 8606200704858056018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_3
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 170
-        width: 7
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8fac09063c59da8d0800000000000000
-      internalID: -2833443924174910728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_4
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 69
-        width: 47
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03e3ea52d48153870800000000000000
-      internalID: 8661856177940741680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_5
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 60
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 459e6e27f93690610800000000000000
-      internalID: 1587909880103496020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_6
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 19
-        width: 164
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96ea3c831f62201f0800000000000000
-      internalID: -1080258143134175639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_7
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 11
-        width: 140
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a22aeecf9e7d9d520800000000000000
-      internalID: 2727448449320395306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_8
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 4
-        width: 141
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cdfea4c2b7c9fff0800000000000000
-      internalID: -1750754219065920
+      spriteID: 755c5873257b6cc40800000000000000
+      internalID: 5532310756017947991
       vertices: []
       indices: 
       edges: []
@@ -361,15 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Clock_0: 4214149858688995037
-      Clock_1: 7792039334551005206
-      Clock_2: 8606200704858056018
-      Clock_3: -2833443924174910728
-      Clock_4: 8661856177940741680
-      Clock_5: 1587909880103496020
-      Clock_6: -1080258143134175639
-      Clock_7: 2727448449320395306
-      Clock_8: -1750754219065920
+      Raccoon_02_0: -1211446625723326948
+      Raccoon_02_1: 6954648886208823730
+      Raccoon_02_2: 5532310756017947991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
