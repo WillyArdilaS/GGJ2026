@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class PlayerDialogueController : AbstractDialogueController
 {
-    // === Dialogue Index ===
-    [SerializeField] private bool dependsOnPhase;
+    [SerializeField] private bool isBasedOnPhase;
+
+    void Awake()
+    {
+        if (isBasedOnPhase) GameManager.instance.PhaseManager.Phase1Completed += () => currentDialogueIndex++;
+    }
 
     // === Overridden Abstract Methods ===
     protected override void OnMouseDown()
@@ -16,7 +20,7 @@ public class PlayerDialogueController : AbstractDialogueController
 
     public override void UpdateDialogueIndex()
     {
-        if (dependsOnPhase)
+        if (isBasedOnPhase)
         {
             if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
             {

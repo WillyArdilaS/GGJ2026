@@ -12,11 +12,6 @@ public abstract class AbstractDialogueController : MonoBehaviour
     // === Abstract Methods ===
     public abstract void UpdateDialogueIndex();
 
-    protected virtual void Awake()
-    {
-        GameManager.instance.PhaseManager.Phase1Completed += () => currentDialogueIndex++;
-    }
-
     protected virtual void OnMouseDown()
     {
         if (GameManager.instance.State != GameManager.GameState.Playing) return;

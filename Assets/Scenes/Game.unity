@@ -401,6 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183094379}
   - component: {fileID: 183094380}
+  - component: {fileID: 183094381}
   m_Layer: 0
   m_Name: DiningRoom_BG
   m_TagString: Untagged
@@ -478,6 +479,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &183094381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183094378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: 32295407b4c83fa409c969ca924c65e9, type: 3}
 --- !u!1 &349813148
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +504,7 @@ GameObject:
   - component: {fileID: 349813151}
   - component: {fileID: 349813150}
   - component: {fileID: 349813152}
+  - component: {fileID: 349813153}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Untagged
@@ -625,10 +640,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: a6645204b153fcf49bee126ce59d5686, type: 2}
   currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 1
+--- !u!114 &349813153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349813148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: f52dd372d61d5ed4580df6abdbc527be, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694613970}
   - component: {fileID: 694613969}
+  - component: {fileID: 694613971}
   m_Layer: 0
   m_Name: LivingRoom_BG
   m_TagString: Untagged
@@ -937,6 +966,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076523826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &694613971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694613968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: 748c5c4fc1244bf498240fb60c37dda2, type: 3}
 --- !u!1 &748059357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1076523826
 Transform:
   m_ObjectHideFlags: 0
@@ -1477,6 +1519,7 @@ GameObject:
   - component: {fileID: 1191049710}
   - component: {fileID: 1191049712}
   - component: {fileID: 1191049713}
+  - component: {fileID: 1191049714}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -1615,7 +1658,20 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 8daa9b9a384d8d241976408e041b1408, type: 2}
   currentDialogueIndex: 0
   lastIndexPhase1: 1
-  dependsOnPhase: 1
+  isBasedOnPhase: 0
+--- !u!114 &1191049714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191049708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: 15bb6873d13548f4b9f31830428780fc, type: 3}
 --- !u!1 &1233071615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2091,7 @@ GameObject:
   - component: {fileID: 1412544109}
   - component: {fileID: 1412544112}
   - component: {fileID: 1412544111}
+  - component: {fileID: 1412544113}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -2174,6 +2231,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.14, y: 8.72}
   m_EdgeRadius: 0
+--- !u!114 &1412544113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412544106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: d63d6bf7ffb98934bbedc6e2cd968c46, type: 3}
 --- !u!1 &1426856959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2256,7 @@ GameObject:
   - component: {fileID: 1426856963}
   - component: {fileID: 1426856962}
   - component: {fileID: 1426856961}
+  - component: {fileID: 1426856964}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -2220,7 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 8891b9cff402e844192b9fe31d408fef, type: 2}
   currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 1
@@ -2325,6 +2396,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1426856964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426856959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: 133460cfd9824554f932a109ba35242a, type: 3}
 --- !u!1 &1458358816
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2559,7 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 8c70ac86a22aaac4788910696b21c0a4, type: 2}
   currentDialogueIndex: 0
   lastIndexPhase1: 0
-  dependsOnPhase: 0
+  isBasedOnPhase: 0
 --- !u!1 &1459342131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2017783748
 Transform:
   m_ObjectHideFlags: 0
@@ -3142,6 +3226,7 @@ GameObject:
   - component: {fileID: 2118731556}
   - component: {fileID: 2118731555}
   - component: {fileID: 2118731557}
+  - component: {fileID: 2118731558}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -3277,10 +3362,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b5c7b42f882479496646729e947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 5ed3631ab12a22f47b2de34711d95c33, type: 2}
   currentDialogueIndex: 0
   lastIndexPhase1: 1
   portraitSide: 0
+--- !u!114 &2118731558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118731553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad4bf6f2a1be6d46b62b1405aa9bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePhase2: {fileID: 21300000, guid: 6cfacd583ce172c4cbc6f0ea52d6ce00, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

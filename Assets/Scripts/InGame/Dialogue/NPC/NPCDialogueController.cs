@@ -11,13 +11,18 @@ public class NPCDialogueController : AbstractDialogueController
     [SerializeField] private PortraitSide portraitSide;
     private SpriteRenderer spriteRend;
 
-    // === Overridden Abstract Methods ===
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
         spriteRend = GetComponent<SpriteRenderer>();
+        GameManager.instance.PhaseManager.Phase1Completed += () => currentDialogueIndex++;
     }
 
+    void Update()
+    {
+        if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
+    }
+
+    // === Overridden Abstract Methods ===
     protected override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -31,7 +36,7 @@ public class NPCDialogueController : AbstractDialogueController
     public override void UpdateDialogueIndex()
     {
         if (currentDialogueIndex == lastIndexPhase1 && !hasRecordedInteraction) RecordInteraction();
-        
+
         if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
         {
             currentDialogueIndex++;
@@ -40,11 +45,6 @@ public class NPCDialogueController : AbstractDialogueController
         {
             currentDialogueIndex++;
         }
-    }
-
-    void Update()
-    {
-        if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
     }
 
     private void RecordInteraction()
