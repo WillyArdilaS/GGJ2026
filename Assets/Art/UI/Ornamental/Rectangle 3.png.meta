@@ -1,31 +1,10 @@
 fileFormatVersion: 2
-guid: a47c71b43fe215140bebc234388cffc6
+guid: 7265d49414614254faf341e8df6c989d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6474961616968771369
-    second: Deco-border_0
-  - first:
-      213: 5329265575870022211
-    second: Deco-border_1
-  - first:
-      213: -5885862180634332136
-    second: Deco-border_2
-  - first:
-      213: -7433772101285603532
-    second: Deco-border_3
-  - first:
-      213: 2480861777029304142
-    second: Deco-border_4
-  - first:
-      213: -7674985099554481600
-    second: Deco-border_5
-  - first:
-      213: 88739029894937479
-    second: Deco-border_6
-  - first:
-      213: -6372502006689041881
-    second: Deco-border_7
+      213: -8578810023014633177
+    second: Rectangle 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Deco-border_1
+      name: Rectangle 3_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 99
-        width: 1011
-        height: 817
+        x: 0
+        y: 0
+        width: 406
+        height: 310
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 342437b3eca55f940800000000000000
-      internalID: 5329265575870022211
+      spriteID: 721f6ae8cb1f1f880800000000000000
+      internalID: -8578810023014633177
       vertices: []
       indices: 
       edges: []
@@ -172,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 87417f96d43ab50458807cc14e650acb
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -182,14 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Deco-border_0: 6474961616968771369
-      Deco-border_1: 5329265575870022211
-      Deco-border_2: -5885862180634332136
-      Deco-border_3: -7433772101285603532
-      Deco-border_4: 2480861777029304142
-      Deco-border_5: -7674985099554481600
-      Deco-border_6: 88739029894937479
-      Deco-border_7: -6372502006689041881
+      Rectangle 3_0: -8578810023014633177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

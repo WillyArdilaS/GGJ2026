@@ -6,19 +6,22 @@ public class NotesPanel : MonoBehaviour
 {
     [SerializeField] private GameObject notesPanelGameObject;
     [SerializeField] private GraphicRaycaster panelRaycaster; // Para bloquear raycast
+    [SerializeField] private GameObject settingsPanel;
+
     
-    private bool isPanelActive = false;
 
     private void Start()
     {
         if (panelRaycaster == null && notesPanelGameObject != null)
             panelRaycaster = notesPanelGameObject.GetComponent<GraphicRaycaster>();
     }
-
-    /// <summary>
-    /// Alterna entre activar y desactivar el panel de notas
-    /// </summary>
-    public void ToggleNotesPanel()
+    public void TogglePanel()
+    {
+        if (settingsPanel == null) return;
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
+    }
+    private bool isPanelActive = false;
+        public void ToggleNotesPanel()
     {
         isPanelActive = !isPanelActive;
 
@@ -26,21 +29,9 @@ public class NotesPanel : MonoBehaviour
         {
             notesPanelGameObject.SetActive(isPanelActive);
             BlockCharacterInteraction(isPanelActive);
-            
-            if (isPanelActive)
-            {
-                Debug.Log("Panel de notas activado");
-            }
-            else
-            {
-                Debug.Log("Panel de notas desactivado");
-            }
         }
     }
 
-    /// <summary>
-    /// Desactiva el panel de notas sin toggle
-    /// </summary>
     public void CloseNotesPanel()
     {
         isPanelActive = false;
@@ -51,9 +42,6 @@ public class NotesPanel : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Bloquea o permite la interacción con los personajes
-    /// </summary>
     private void BlockCharacterInteraction(bool block)
     {
         if (panelRaycaster != null)
@@ -62,9 +50,6 @@ public class NotesPanel : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Obtiene el estado actual del panel
-    /// </summary>
     public bool IsPanelActive()
     {
         return isPanelActive;
