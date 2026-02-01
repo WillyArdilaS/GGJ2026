@@ -11,9 +11,16 @@ public class PlayerDialogueController : AbstractDialogueController
 
     void OnMouseDown()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        if (GameManager.instance.CurrentGameState != GameManager.GameState.Playing) return;
 
-        PlayerDialogueData playerDialogueData = dialogueData as PlayerDialogueData;
+        // Select the dialogue data according to the current language
+        PlayerDialogueData playerDialogueData = GlobalManager.instance.LanguageManager.CurrentLanguage switch 
+        {
+            LanguageManager.Language.English => dialogueDataEN as PlayerDialogueData,
+            LanguageManager.Language.Spanish => dialogueDataES as PlayerDialogueData,
+            _ => dialogueDataES as PlayerDialogueData
+        };
+
         GameManager.instance.DialogueManager.StartPlayerDialogue(this, playerDialogueData, currentDialogueIndex);
     }
 
@@ -22,18 +29,18 @@ public class PlayerDialogueController : AbstractDialogueController
     {
         if (isBasedOnPhase)
         {
-            if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
+            if (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase1 && currentDialogueIndex < lastIndexPhase1)
             {
                 currentDialogueIndex++;
             }
-            else if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase2 && currentDialogueIndex < dialogueData.Dialogues.Length - 1)
+            else if (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase2 && currentDialogueIndex < dialogueDataEN.Dialogues.Length - 1)
             {
                 currentDialogueIndex++;
             }
         }
         else
         {
-            if (currentDialogueIndex < dialogueData.Dialogues.Length - 1) currentDialogueIndex++;
+            if (currentDialogueIndex < dialogueDataEN.Dialogues.Length - 1) currentDialogueIndex++;
         }
     }
 }

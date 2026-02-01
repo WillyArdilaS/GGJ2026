@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
 
         StartTypingAnimation();
-        GameManager.instance.State = GameManager.GameState.ShowingDialogue;
+        GameManager.instance.CurrentGameState = GameManager.GameState.ShowingDialogue;
     }
 
     public void StartNpcDialogue(AbstractDialogueController dialogueController, NPCDialogueController.PortraitSide portraitSide, NPCDialogueData dialogueData,
@@ -92,7 +92,7 @@ public class DialogueManager : MonoBehaviour
         };
         
         portraitRectTransform.anchoredPosition = portraitPosition;
-        portraitImg.sprite = (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
+        portraitImg.sprite = (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
         portrait.SetActive(portraitImg.sprite != null);
 
         nameBox.SetActive(true);
@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
 
         StartTypingAnimation();
-        GameManager.instance.State = GameManager.GameState.ShowingDialogue;
+        GameManager.instance.CurrentGameState = GameManager.GameState.ShowingDialogue;
     }
 
     public void ShowNextLine()
@@ -135,7 +135,7 @@ public class DialogueManager : MonoBehaviour
         StopCoroutine(typeLineRoutine);
 
         currentDialogueController.UpdateDialogueIndex();
-        GameManager.instance.State = GameManager.GameState.Playing;
+        GameManager.instance.CurrentGameState = GameManager.GameState.Playing;
 
         // Reset dialogue and UI variables
         currentDialogueData = null;

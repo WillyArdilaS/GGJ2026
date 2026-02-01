@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee1d63dc8843548a2188dc6624828f, type: 3}
+  m_Name: Cat_EN
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.03
+  dialogues:
+  - hasAChoice: 0
+    lines:
+    - Aha, you need information.
+    - Let me finish watching this Instagram stories first.
+  - hasAChoice: 0
+    lines:
+    - This is obviously about money.
+    - But I'm not getting any, so I don't care.
+  - hasAChoice: 0
+    lines:
+    - Bestest little sister in the planet, could you get me some milk?
+  npcName: Cat
+  npcPortraitPhase1: {fileID: 21300000, guid: cde6f4e2bdbaf9f45bab171abcf143de, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 83932de9f5650d54b80ff895a7ef052d, type: 3}

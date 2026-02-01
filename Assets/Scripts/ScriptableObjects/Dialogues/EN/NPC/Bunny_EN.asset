@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee1d63dc8843548a2188dc6624828f, type: 3}
+  m_Name: Bunny_EN
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.03
+  dialogues:
+  - hasAChoice: 0
+    lines:
+    - This isn't happening.
+    - This isn't happening.
+    - "This isn't happening\u2026"
+    - Tell me this isn't happening!
+  - hasAChoice: 0
+    lines:
+    - Who's going to take care about my daughter?
+    - I cannot take care of her.
+    - I cannot do this on my own.
+  - hasAChoice: 0
+    lines:
+    - Is it wrong if I say that my concern right now is not being able to smoke again?
+  npcName: Bunny
+  npcPortraitPhase1: {fileID: 21300000, guid: 6bf8051b87b58f54798c06655c92b98a, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 475bd9a29b6bf0742b78e12ee56821c5, type: 3}

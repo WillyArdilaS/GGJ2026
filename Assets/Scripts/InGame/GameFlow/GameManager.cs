@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour
 
     // === States ===
     public enum GameState { Playing, ShowingAnimation, ShowingDialogue, ShowingClues, InPause }
-    [SerializeField] private GameState gameState = GameState.Playing;
+    [SerializeField] private GameState currentGameState = GameState.Playing;
 
     // === Properties ===
     public PhaseManager PhaseManager => phaseManager;
     public DialogueManager DialogueManager => dialogueManager;
-    public GameState State { get => gameState; set => gameState = value; }
+    public GameState CurrentGameState { get => currentGameState; set => currentGameState = value; }
 
     void Awake()
     {

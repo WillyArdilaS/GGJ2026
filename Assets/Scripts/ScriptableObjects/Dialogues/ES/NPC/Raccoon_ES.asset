@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee1d63dc8843548a2188dc6624828f, type: 3}
+  m_Name: Raccoon_ES
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.03
+  dialogues:
+  - hasAChoice: 0
+    lines:
+    - "\xBFLe cort\xE9 un hueco a mi m\xE1scara para poder comer?"
+    - "S\xED, s\xED lo hice."
+  - hasAChoice: 0
+    lines:
+    - "Mi t\xEDa no deja de cocinar ni siquiera por su hermano."
+    - Pero bueno, mejor para mi.
+  - hasAChoice: 0
+    lines:
+    - "No estar\xE1s sospechando de mi pap\xE1 \xBFverdad?"
+    - "S\xE9 que \xE9l recibir\xEDa la herencia."
+    - "Pero \xE9l nunca har\xEDa algo as\xED."
+  npcName: Mapache
+  npcPortraitPhase1: {fileID: 21300000, guid: aaddcf993e7d6bb47b2f4f765b1f075e, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 749a3432d3193844bb44adb14c0a26ea, type: 3}

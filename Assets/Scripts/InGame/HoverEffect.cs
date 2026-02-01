@@ -13,7 +13,7 @@ public class HoverEffect : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        if (GameManager.instance.CurrentGameState != GameManager.GameState.Playing) return;
 
         spriteRend.color = hoverColor;
     }

@@ -16,7 +16,7 @@ public class Dialogue
 public class DialogueData : ScriptableObject
 {
     // === Data Fields ===
-    [SerializeField] private float typingSpeed = 0.035f;
+    [SerializeField] private float typingSpeed = 0.03f;
     [SerializeField] private Dialogue[] dialogues;
 
     // === Properties ===

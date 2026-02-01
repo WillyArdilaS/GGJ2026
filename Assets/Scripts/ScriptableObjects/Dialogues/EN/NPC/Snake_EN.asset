@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee1d63dc8843548a2188dc6624828f, type: 3}
+  m_Name: Snake_EN
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.03
+  dialogues:
+  - hasAChoice: 0
+    lines:
+    - Does your mother ever clean this house?
+    - I will need to prep it MYSELF for the funeral.
+  - hasAChoice: 0
+    lines:
+    - I wouldn't trust that goody two-shoes that's in the bathroom.
+    - Even so, it's my brother's fault for choosing her.
+  - hasAChoice: 0
+    lines:
+    - Maybe it'sss not my businesss.
+    - But that ssslimy fellow and that vixen are very suspiciousss.
+  npcName: Snake
+  npcPortraitPhase1: {fileID: 21300000, guid: f4de84a66b57a304782e4718589cfbf0, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 626ec47114e837347954fbee98b7e6bf, type: 3}

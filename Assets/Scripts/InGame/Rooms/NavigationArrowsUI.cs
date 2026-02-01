@@ -32,7 +32,7 @@ public class NavigationArrowsUI : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        if (GameManager.instance.CurrentGameState != GameManager.GameState.Playing) return;
 
         float mouseX = Input.mousePosition.x;
         float screenWidth = Screen.width;

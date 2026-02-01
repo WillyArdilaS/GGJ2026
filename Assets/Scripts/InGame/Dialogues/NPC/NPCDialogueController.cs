@@ -6,9 +6,10 @@ public class NPCDialogueController : AbstractDialogueController
     // === Phase 1 Validation ===
     private bool hasRecordedInteraction = false;
 
-    // === NPC Sprite ===
+    // === NPC Portrait ===
     public enum PortraitSide { Left, Center, Right }
-    [SerializeField] private PortraitSide portraitSide;
+    [Header("Portrait")]
+    [SerializeField] private PortraitSide currentPortraitSide;
     private SpriteRenderer spriteRend;
 
     void Awake()
@@ -19,15 +20,22 @@ public class NPCDialogueController : AbstractDialogueController
 
     void Update()
     {
-        if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
+        if (GameManager.instance.CurrentGameState != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
     }
 
     void OnMouseDown()
     {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
+        if (GameManager.instance.CurrentGameState != GameManager.GameState.Playing) return;
 
-        NPCDialogueData npcDialogueData = dialogueData as NPCDialogueData;
-        GameManager.instance.DialogueManager.StartNpcDialogue(this, portraitSide, npcDialogueData, currentDialogueIndex);
+        // Select the dialog data according to the current language
+        NPCDialogueData npcDialogueData = GlobalManager.instance.LanguageManager.CurrentLanguage switch
+        {
+            LanguageManager.Language.English => dialogueDataEN as NPCDialogueData,
+            LanguageManager.Language.Spanish => dialogueDataES as NPCDialogueData,
+            _ => dialogueDataES as NPCDialogueData
+        };
+        
+        GameManager.instance.DialogueManager.StartNpcDialogue(this, currentPortraitSide, npcDialogueData, currentDialogueIndex);
 
         spriteRend.enabled = false;
     }
@@ -37,11 +45,11 @@ public class NPCDialogueController : AbstractDialogueController
     {
         if (currentDialogueIndex == lastIndexPhase1 && !hasRecordedInteraction) RecordInteraction();
 
-        if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1 && currentDialogueIndex < lastIndexPhase1)
+        if (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase1 && currentDialogueIndex < lastIndexPhase1)
         {
             currentDialogueIndex++;
         }
-        else if (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase2 && currentDialogueIndex < dialogueData.Dialogues.Length - 1)
+        else if (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase2 && currentDialogueIndex < dialogueDataEN.Dialogues.Length - 1)
         {
             currentDialogueIndex++;
         }
