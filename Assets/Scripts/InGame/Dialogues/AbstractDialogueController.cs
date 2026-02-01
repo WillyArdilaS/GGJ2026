@@ -11,9 +11,4 @@ public abstract class AbstractDialogueController : MonoBehaviour
 
     // === Abstract Methods ===
     public abstract void UpdateDialogueIndex();
-
-    protected virtual void OnMouseDown()
-    {
-        if (GameManager.instance.State != GameManager.GameState.Playing) return;
-    }
 }

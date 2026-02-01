@@ -9,8 +9,8 @@ public class PhaseManager : MonoBehaviour
 
     // === Phase 1 Management ===
     [Header("Phase 1")]
-    [SerializeField] private int currentInteractions = 0;
-    [SerializeField] private int totalInteractions;
+    [SerializeField] private int currentNPCInteractions = 0;
+    [SerializeField] private int totalNPCInteractions;
 
     // === Events ===
     public event Action Phase1Completed;
@@ -21,8 +21,8 @@ public class PhaseManager : MonoBehaviour
 
     public void UpdateInteractionsPhase1()
     {
-        currentInteractions++;
-        if (currentInteractions >= totalInteractions) StartPhase2();
+        currentNPCInteractions++;
+        if (currentNPCInteractions >= totalNPCInteractions) StartPhase2();
     }
 
     private void StartPhase2()

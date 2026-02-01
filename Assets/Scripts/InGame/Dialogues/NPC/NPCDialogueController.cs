@@ -7,7 +7,7 @@ public class NPCDialogueController : AbstractDialogueController
     private bool hasRecordedInteraction = false;
 
     // === NPC Sprite ===
-    public enum PortraitSide { Left, Right }
+    public enum PortraitSide { Left, Center, Right }
     [SerializeField] private PortraitSide portraitSide;
     private SpriteRenderer spriteRend;
 
@@ -22,10 +22,9 @@ public class NPCDialogueController : AbstractDialogueController
         if (GameManager.instance.State != GameManager.GameState.ShowingDialogue) spriteRend.enabled = true;
     }
 
-    // === Overridden Abstract Methods ===
-    protected override void OnMouseDown()
+    void OnMouseDown()
     {
-        base.OnMouseDown();
+        if (GameManager.instance.State != GameManager.GameState.Playing) return;
 
         NPCDialogueData npcDialogueData = dialogueData as NPCDialogueData;
         GameManager.instance.DialogueManager.StartNpcDialogue(this, portraitSide, npcDialogueData, currentDialogueIndex);
@@ -33,6 +32,7 @@ public class NPCDialogueController : AbstractDialogueController
         spriteRend.enabled = false;
     }
 
+    // === Overridden Abstract Methods ===
     public override void UpdateDialogueIndex()
     {
         if (currentDialogueIndex == lastIndexPhase1 && !hasRecordedInteraction) RecordInteraction();

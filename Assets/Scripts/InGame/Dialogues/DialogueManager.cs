@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     // === Portrait ===
     [Header("Portrait Position")]
     [SerializeField] private float leftPortraitXPos;
+    [SerializeField] private float centerPortraitXPos;
     [SerializeField] private float rightPortraitXPos;
     private Image portraitImg;
     private RectTransform portraitRectTransform;
@@ -82,10 +83,15 @@ public class DialogueManager : MonoBehaviour
         lineIndex = 0;
 
         // Display dialogue data in UI
-        Vector2 portraitPosition = (portraitSide == NPCDialogueController.PortraitSide.Left) ? new(leftPortraitXPos, portraitRectTransform.anchoredPosition.y) :
-        new(rightPortraitXPos, portraitRectTransform.anchoredPosition.y);
+        Vector2 portraitPosition = portraitSide switch
+        {
+            NPCDialogueController.PortraitSide.Left => new(leftPortraitXPos, portraitRectTransform.anchoredPosition.y),
+            NPCDialogueController.PortraitSide.Center => new(centerPortraitXPos, portraitRectTransform.anchoredPosition.y),
+            NPCDialogueController.PortraitSide.Right => new(rightPortraitXPos, portraitRectTransform.anchoredPosition.y),
+            _ => new(centerPortraitXPos, portraitRectTransform.anchoredPosition.y),
+        };
+        
         portraitRectTransform.anchoredPosition = portraitPosition;
-
         portraitImg.sprite = (GameManager.instance.PhaseManager.Phase == PhaseManager.CurrentPhase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
         portrait.SetActive(portraitImg.sprite != null);
 

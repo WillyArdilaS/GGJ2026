@@ -9,15 +9,15 @@ public class PlayerDialogueController : AbstractDialogueController
         if (isBasedOnPhase) GameManager.instance.PhaseManager.Phase1Completed += () => currentDialogueIndex++;
     }
 
-    // === Overridden Abstract Methods ===
-    protected override void OnMouseDown()
+    void OnMouseDown()
     {
-        base.OnMouseDown();
+        if (GameManager.instance.State != GameManager.GameState.Playing) return;
 
         PlayerDialogueData playerDialogueData = dialogueData as PlayerDialogueData;
         GameManager.instance.DialogueManager.StartPlayerDialogue(this, playerDialogueData, currentDialogueIndex);
     }
 
+    // === Overridden Abstract Methods ===
     public override void UpdateDialogueIndex()
     {
         if (isBasedOnPhase)
