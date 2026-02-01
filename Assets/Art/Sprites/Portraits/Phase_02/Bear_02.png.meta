@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6f75b985da8047c418580d5942f982c7
+guid: 435fe222a846ca34ca3f64eeb6203cbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2982106011011287898
-    second: Bear_Phase2_0
+      213: 1218084826102685372
+    second: Characters_Phase_2-7_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bear_Phase2_0
+      name: Characters_Phase_2-7_0
       rect:
         serializedVersion: 2
         x: 139
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5b82ecfd91926920800000000000000
-      internalID: 2982106011011287898
+      spriteID: cbed42612b187e010800000000000000
+      internalID: 1218084826102685372
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bear_Phase2_0: 2982106011011287898
+      Characters_Phase_2-7_0: 1218084826102685372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

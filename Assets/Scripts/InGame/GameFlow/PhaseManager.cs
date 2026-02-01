@@ -19,6 +19,11 @@ public class PhaseManager : MonoBehaviour
     // === Properties ===
     public Phase CurrentPhase { get => currentPhase; set => currentPhase = value; }
 
+    void Awake()
+    {
+        GameManager.instance.DialogueManager.YesButtonPressed += StartFinalPhase;
+    }
+
     public void UpdateInteractionsPhase1()
     {
         currentNPCInteractions++;
@@ -29,5 +34,11 @@ public class PhaseManager : MonoBehaviour
     {
         Phase1Completed?.Invoke();
         currentPhase = Phase.Phase2;
+    }
+
+    private void StartFinalPhase()
+    {
+        Phase2Completed?.Invoke();
+        currentPhase = Phase.FinalPhase;
     }
 }

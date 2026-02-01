@@ -26,5 +26,5 @@ MonoBehaviour:
     - "Mi t\xEDa no me acompaaa\xF1a por estar jugaaando."
     - "\xA1Quiero a mi paaap\xE1 ya!"
   npcName: Cordero
-  npcPortraitPhase1: {fileID: 21300000, guid: 4e610b2e5a56d9147b582e544ec660c2, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 9552f66c0d80a354cae526eecd1d38a7, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 98983524b0c1505418950d5b7d521969, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 77b43ebd0beac3a4780107e141016bde, type: 3}

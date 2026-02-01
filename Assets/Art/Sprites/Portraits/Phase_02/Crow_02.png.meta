@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 05b0c96e3eff1a34fa9d52f000ccc424
+guid: 11a5211a9da52e64295bac6b14414bba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3111263217482812751
-    second: Crow_Phase2_0
+      213: -2668296506076952081
+    second: Characters_Phase_2-4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crow_Phase2_0
+      name: Characters_Phase_2-4_0
       rect:
         serializedVersion: 2
         x: 144
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b2b23f769292d4d0800000000000000
-      internalID: -3111263217482812751
+      spriteID: fe90ed7077e48fad0800000000000000
+      internalID: -2668296506076952081
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Crow_Phase2_0: -3111263217482812751
+      Characters_Phase_2-4_0: -2668296506076952081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

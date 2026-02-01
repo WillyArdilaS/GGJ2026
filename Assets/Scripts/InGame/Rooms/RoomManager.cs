@@ -6,6 +6,7 @@ public class RoomManager : MonoBehaviour
 {
     // === Rooms ===
     [SerializeField] private RoomInfo[] rooms;
+    [SerializeField] private RoomInfo lastRoom;
     private int currentRoomIndex;
 
     // === Camera ===
@@ -17,6 +18,7 @@ public class RoomManager : MonoBehaviour
 
     void Awake()
     {
+        GameManager.instance.PhaseManager.Phase2Completed += MoveToFinalStage;
         mainCam = Camera.main;
     }
 
@@ -30,6 +32,7 @@ public class RoomManager : MonoBehaviour
             if(rooms[i].Position.x == mainCam.transform.position.x && rooms[i].Position.y == mainCam.transform.position.y) currentRoomIndex = i;
         }
 
+        lastRoom.gameObject.SetActive(false);
         rooms[currentRoomIndex].gameObject.SetActive(true);
     }
 
@@ -55,5 +58,13 @@ public class RoomManager : MonoBehaviour
             currentRoomIndex++;
             mainCam.transform.position = new(rooms[currentRoomIndex].Position.x, rooms[currentRoomIndex].Position.y, mainCam.transform.position.z);
         }
+    }
+
+    private void MoveToFinalStage()
+    {
+        rooms[currentRoomIndex].gameObject.SetActive(false);
+        lastRoom.gameObject.SetActive(true);
+
+        mainCam.transform.position = new(lastRoom.Position.x, lastRoom.Position.y, mainCam.transform.position.z);
     }
 }

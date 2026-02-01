@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be0e8d81e92df3b4d954573c64852e61
+guid: 442490b0158f46043b7546c902f0f603
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1821403633257654183
-    second: Fox_Phase2_0
+      213: 6250361500825802589
+    second: Characters_Phase_2-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fox_Phase2_0
+      name: Characters_Phase_2-1_0
       rect:
         serializedVersion: 2
         x: 206
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a7ade844fce64910800000000000000
-      internalID: 1821403633257654183
+      spriteID: d57df7e4baebdb650800000000000000
+      internalID: 6250361500825802589
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fox_Phase2_0: 1821403633257654183
+      Characters_Phase_2-1_0: 6250361500825802589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

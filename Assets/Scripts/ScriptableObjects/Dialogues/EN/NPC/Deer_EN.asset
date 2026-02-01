@@ -25,5 +25,5 @@ MonoBehaviour:
     lines:
     - Thirteen guests minus one is not thirteen...
   npcName: Deer
-  npcPortraitPhase1: {fileID: 21300000, guid: 4e12063120b285a4d8c6714d7df9f141, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: baf6b8212def3484fb1e1a715d82ac2f, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: cbaab9acf16d83a4abce7c9ebe44134c, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 3cd383fa73d97bb47b13c19d63b0b9dc, type: 3}

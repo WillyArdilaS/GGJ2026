@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9552f66c0d80a354cae526eecd1d38a7
+guid: 77b43ebd0beac3a4780107e141016bde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8195096370728083631
-    second: Lamb_Phase2_0
+      213: 5997497458215504098
+    second: Characters_Phase_2-8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamb_Phase2_0
+      name: Characters_Phase_2-8_0
       rect:
         serializedVersion: 2
         x: 261
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15fd8a2354b254e80800000000000000
-      internalID: -8195096370728083631
+      spriteID: 2e84e3289246b3350800000000000000
+      internalID: 5997497458215504098
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lamb_Phase2_0: -8195096370728083631
+      Characters_Phase_2-8_0: 5997497458215504098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

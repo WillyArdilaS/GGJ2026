@@ -28,5 +28,5 @@ MonoBehaviour:
     - Ya me da igual lo que pase conmigo.
     - "Pero me preocupa mi mam\xE1."
   npcName: Zorro
-  npcPortraitPhase1: {fileID: 21300000, guid: e6dcbf4a1f71d804d873a1f9c219b17d, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: be0e8d81e92df3b4d954573c64852e61, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 17ddb101e4efa3f48b3374547679960c, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 442490b0158f46043b7546c902f0f603, type: 3}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0283236333b3bdd4abde6c53683dfe34
+guid: 7b29dd757f23af84b816aa7cbaf17235
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3686708530790142404
-    second: DiningRoom_0
+      213: 1010760220507942153
+    second: Fase_1-10_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DiningRoom_0
+      name: Fase_1-10_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3ee9dfcf1e26dcc0800000000000000
-      internalID: -3686708530790142404
+      spriteID: 90da878b011f60e00800000000000000
+      internalID: 1010760220507942153
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DiningRoom_0: -3686708530790142404
+      Fase_1-10_0: 1010760220507942153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

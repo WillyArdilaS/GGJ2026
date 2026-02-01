@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2bb78f56fb9f14448ae52f3e1a4373de
+guid: bfaa0b0701ffb834490b40b85c153278
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5125275235917308760
-    second: Pig_Phase2_0
+      213: -6402545326880992526
+    second: Characters_Phase_2-10_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pig_Phase2_0
+      name: Characters_Phase_2-10_0
       rect:
         serializedVersion: 2
         x: 166
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85325f41ca2a02740800000000000000
-      internalID: 5125275235917308760
+      spriteID: 2f2dbe482f69527a0800000000000000
+      internalID: -6402545326880992526
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pig_Phase2_0: 5125275235917308760
+      Characters_Phase_2-10_0: -6402545326880992526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

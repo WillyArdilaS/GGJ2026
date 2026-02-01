@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 748c5c4fc1244bf498240fb60c37dda2
+guid: 08896851f1356ac4f9cdf0de883dbad9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8298680676942290055
-    second: LivingRoom_02_0
+      213: 6821078455908710593
+    second: Fase_2-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LivingRoom_02_0
+      name: Fase_2-1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78c1b8d7b16da2370800000000000000
-      internalID: 8298680676942290055
+      spriteID: 1c8328d47b659ae50800000000000000
+      internalID: 6821078455908710593
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LivingRoom_02_0: 8298680676942290055
+      Fase_2-1_0: 6821078455908710593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4407783189838192394}
   - component: {fileID: 3368075107848063024}
+  - component: {fileID: 351938979032353149}
   m_Layer: 0
   m_Name: PhaseManager
   m_TagString: Untagged
@@ -47,6 +48,20 @@ MonoBehaviour:
   currentPhase: 0
   currentNPCInteractions: 0
   totalNPCInteractions: 13
+--- !u!114 &351938979032353149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450973056404484850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43d693e7c6bd5449a2cf7dd5c7e1127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueDataEN: {fileID: 11400000, guid: b03ecc76388ab3644962c6758191c1da, type: 2}
+  dialogueDataES: {fileID: 11400000, guid: 53dcdf61b87bd8e45b5ee469b10d0569, type: 2}
 --- !u!1 &2006949573220369631
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +115,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lastRoom: {fileID: 0}
 --- !u!114 &2892557874184593241
 MonoBehaviour:
   m_ObjectHideFlags: 0

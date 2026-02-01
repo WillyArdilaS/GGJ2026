@@ -26,5 +26,5 @@ MonoBehaviour:
     lines:
     - Para terminar en estas me hubiera quedado viendo el partido de los Yankees.
   npcName: Oso de anteojos
-  npcPortraitPhase1: {fileID: 21300000, guid: f458547b9a613c649871e026aa7e8051, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 6f75b985da8047c418580d5942f982c7, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 4fbd6c2fa8633b44f916109adb497a9c, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 435fe222a846ca34ca3f64eeb6203cbc, type: 3}

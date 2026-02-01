@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 475bd9a29b6bf0742b78e12ee56821c5
+guid: b83029567c912a242bdb647461526eaa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1393381742051236668
-    second: Bunny_Phase2_0
+      213: -7989776401669386527
+    second: Characters_Phase_2-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bunny_Phase2_0
+      name: Characters_Phase_2-2_0
       rect:
         serializedVersion: 2
         x: 177
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c4658420b6b9ace0800000000000000
-      internalID: -1393381742051236668
+      spriteID: 1ee82bfb1bc9e1190800000000000000
+      internalID: -7989776401669386527
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bunny_Phase2_0: -1393381742051236668
+      Characters_Phase_2-2_0: -7989776401669386527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

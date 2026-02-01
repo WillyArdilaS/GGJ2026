@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: baf6b8212def3484fb1e1a715d82ac2f
+guid: 3cd383fa73d97bb47b13c19d63b0b9dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8374253150607831417
-    second: Deer_Phase2_0
+      213: 6268840001135225208
+    second: Characters_Phase_2-3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Deer_Phase2_0
+      name: Characters_Phase_2-3_0
       rect:
         serializedVersion: 2
         x: 128
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 971fc2d2fd2573470800000000000000
-      internalID: 8374253150607831417
+      spriteID: 879ac6d64c46ff650800000000000000
+      internalID: 6268840001135225208
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Deer_Phase2_0: 8374253150607831417
+      Characters_Phase_2-3_0: 6268840001135225208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

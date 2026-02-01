@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 626ec47114e837347954fbee98b7e6bf
+guid: e33518849aef4ba439768436cda9c0d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5592698038458994525
-    second: Snake_Phase2_0
+      213: 2247518080422897021
+    second: Characters_Phase_2-13_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snake_Phase2_0
+      name: Characters_Phase_2-13_0
       rect:
         serializedVersion: 2
         x: 174
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5f4f5e0c314d9d40800000000000000
-      internalID: 5592698038458994525
+      spriteID: d75efd949c9c03f10800000000000000
+      internalID: 2247518080422897021
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Snake_Phase2_0: 5592698038458994525
+      Characters_Phase_2-13_0: 2247518080422897021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

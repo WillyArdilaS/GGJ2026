@@ -28,5 +28,5 @@ MonoBehaviour:
     - "S\xE9 que \xE9l recibir\xEDa la herencia."
     - "Pero \xE9l nunca har\xEDa algo as\xED."
   npcName: Mapache
-  npcPortraitPhase1: {fileID: 21300000, guid: aaddcf993e7d6bb47b2f4f765b1f075e, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 749a3432d3193844bb44adb14c0a26ea, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 253ea721a081b1e439cb8468da69c1a7, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: ab888ef6a6d278b43847516c90b45a5e, type: 3}

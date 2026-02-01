@@ -26,5 +26,5 @@ MonoBehaviour:
     lines:
     - Bestest little sister in the planet, could you get me some milk?
   npcName: Cat
-  npcPortraitPhase1: {fileID: 21300000, guid: cde6f4e2bdbaf9f45bab171abcf143de, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 83932de9f5650d54b80ff895a7ef052d, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: de01a2c650216d740b20ad35fda280f0, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: ea5a00e9e3e414a478006d5b3ecbfe0a, type: 3}

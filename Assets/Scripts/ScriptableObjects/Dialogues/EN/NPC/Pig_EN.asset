@@ -28,5 +28,5 @@ MonoBehaviour:
     - I'm feeling weird.
     - It must be the metal head plate I earned on Irak.
   npcName: Pig
-  npcPortraitPhase1: {fileID: 21300000, guid: bd6d43d7fb5f6ea4c859127c2d174590, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 2bb78f56fb9f14448ae52f3e1a4373de, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 21e58eb788eba6c42be9a6deddae9aff, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: bfaa0b0701ffb834490b40b85c153278, type: 3}

@@ -30,5 +30,5 @@ MonoBehaviour:
     lines:
     - Is it me or something smells delicious?
   npcName: Crow
-  npcPortraitPhase1: {fileID: 21300000, guid: 11c6434bde3d13d41b91f95fd2aaae7c, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 05b0c96e3eff1a34fa9d52f000ccc424, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 22ee537bd9fc1254ba1f097a289c10da, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 11a5211a9da52e64295bac6b14414bba, type: 3}

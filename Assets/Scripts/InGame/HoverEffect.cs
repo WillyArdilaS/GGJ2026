@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class HoverEffect : MonoBehaviour
 {
-    [SerializeField] private Color hoverColor = new(0.85f, 0.5f, 0.5f, 1f);
+    [SerializeField] private Color hoverColor = new(0.57f, 0.24f, 0.2f, 1);
     private SpriteRenderer spriteRend;
 
     void Awake()

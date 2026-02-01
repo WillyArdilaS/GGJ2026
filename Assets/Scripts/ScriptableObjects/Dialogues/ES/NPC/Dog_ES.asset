@@ -26,5 +26,5 @@ MonoBehaviour:
     lines:
     - "Si esto termina pronto, \xBFhay alg\xFAn parque aqu\xED cerca?"
   npcName: Perro
-  npcPortraitPhase1: {fileID: 21300000, guid: e39868d9dbb8bcd4097855079e99193c, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 2c0d22e251ea38d4d96fbc54201cf70a, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: ef8d139f2406312418f6d9dc37dd6ecb, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: eaf66b4f6c3adb04bac91f3ca62dc299, type: 3}

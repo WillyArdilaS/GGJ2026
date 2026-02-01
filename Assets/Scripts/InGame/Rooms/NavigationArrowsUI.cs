@@ -18,6 +18,7 @@ public class NavigationArrowsUI : MonoBehaviour
 
     void Awake()
     {
+        GameManager.instance.PhaseManager.Phase2Completed += DisableArrows;
         roomManager = GetComponent<RoomManager>();
 
         // Hide both arrow gorups
@@ -52,5 +53,12 @@ public class NavigationArrowsUI : MonoBehaviour
         bool interactable = group.alpha > 0.9f;
         group.interactable = interactable;
         group.blocksRaycasts = interactable;
+    }
+
+    private void DisableArrows()
+    {
+        leftArrowGroup.gameObject.SetActive(false);
+        rightArrowGroup.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

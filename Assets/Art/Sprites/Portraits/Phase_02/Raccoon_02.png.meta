@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 749a3432d3193844bb44adb14c0a26ea
+guid: ab888ef6a6d278b43847516c90b45a5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2105238805416185733
-    second: Raccoon_Phase2_0
+      213: -3723932039670548775
+    second: Characters_Phase_2-6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Raccoon_Phase2_0
+      name: Characters_Phase_2-6_0
       rect:
         serializedVersion: 2
         x: 57
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58f033c1a8f473d10800000000000000
-      internalID: 2105238805416185733
+      spriteID: 9d6bdb74a8fe15cc0800000000000000
+      internalID: -3723932039670548775
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Raccoon_Phase2_0: 2105238805416185733
+      Characters_Phase_2-6_0: -3723932039670548775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

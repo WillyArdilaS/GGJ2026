@@ -57,7 +57,7 @@ public class DialogueManager : MonoBehaviour
         this.dialogueIndex = dialogueIndex;
         lineIndex = 0;
 
-        // Display dialogue data in UI        
+        // Show / hide UI elements        
         portrait.SetActive(false);
         nameBox.SetActive(false);
 
@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
             NPCDialogueController.PortraitSide.Right => new(rightPortraitXPos, portraitRectTransform.anchoredPosition.y),
             _ => new(centerPortraitXPos, portraitRectTransform.anchoredPosition.y),
         };
-        
+
         portraitRectTransform.anchoredPosition = portraitPosition;
         portraitImg.sprite = (GameManager.instance.PhaseManager.CurrentPhase == PhaseManager.Phase.Phase1) ? dialogueData.PortraitPhase1 : dialogueData.PortraitPhase2;
         portrait.SetActive(portraitImg.sprite != null);
@@ -107,6 +107,35 @@ public class DialogueManager : MonoBehaviour
         GameManager.instance.CurrentGameState = GameManager.GameState.ShowingDialogue;
     }
 
+    public void StartFinalPhaseDialogue(PlayerDialogueData dialogueData, int dialogueIndex)
+    {
+        if (dialogueData.Dialogues.Length == 0 || dialogueIndex >= dialogueData.Dialogues.Length) return;
+        if (dialogueData.Dialogues[dialogueIndex].Lines.Length == 0) return;
+
+        // Initialize global dialogue variables
+        currentDialogueData = dialogueData;
+        this.dialogueIndex = dialogueIndex;
+        lineIndex = 0;
+
+        // Show / hide UI elements   
+        ShowButtons(false);
+        dialoguePanel.SetActive(true);
+
+        StartTypingAnimation();
+        GameManager.instance.CurrentGameState = GameManager.GameState.ShowingDialogue;
+    }
+
+    public void ShowAccusedName(string npcName, float typingSpeed)
+    { 
+        ShowButtons(false);
+        dialoguePanel.SetActive(true);
+
+        if (typeLineRoutine != null) StopCoroutine(typeLineRoutine);
+        typeLineRoutine = StartCoroutine(TypeLine(npcName, typingSpeed));
+
+        GameManager.instance.CurrentGameState = GameManager.GameState.ShowingDialogue;
+    }
+
     public void ShowNextLine()
     {
         if (isTyping)
@@ -116,7 +145,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentDialogueData.Dialogues[dialogueIndex].Lines[lineIndex];
             isTyping = false;
         }
-        else if (++lineIndex < currentDialogueData.Dialogues[dialogueIndex].Lines.Length)
+        else if (currentDialogueData != null && ++lineIndex < currentDialogueData.Dialogues[dialogueIndex].Lines.Length)
         {
             // If the dialogue has a choice and it is the last line, display the choice buttons
             bool isLastLine = lineIndex == currentDialogueData.Dialogues[dialogueIndex].Lines.Length - 1;
@@ -134,10 +163,11 @@ public class DialogueManager : MonoBehaviour
     {
         StopCoroutine(typeLineRoutine);
 
-        currentDialogueController.UpdateDialogueIndex();
+        if (currentDialogueController != null) currentDialogueController.UpdateDialogueIndex();
         GameManager.instance.CurrentGameState = GameManager.GameState.Playing;
 
         // Reset dialogue and UI variables
+        currentDialogueController = null;
         currentDialogueData = null;
         dialogueIndex = -1;
         lineIndex = -1;
@@ -168,6 +198,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (choice == true) YesButtonPressed?.Invoke(); else NoButtonPressed?.Invoke();
             EndDialogue();
+            GameManager.instance.CurrentGameState = GameManager.GameState.ShowingAnimation;
         }
     }
 
@@ -178,10 +209,10 @@ public class DialogueManager : MonoBehaviour
         string nextLine = currentDialogueData.Dialogues[dialogueIndex].Lines[lineIndex];
 
         if (typeLineRoutine != null) StopCoroutine(typeLineRoutine);
-        typeLineRoutine = StartCoroutine(TypeLine(nextLine));
+        typeLineRoutine = StartCoroutine(TypeLine(nextLine, currentDialogueData.TypingSpeed));
     }
 
-    private IEnumerator TypeLine(string line)
+    private IEnumerator TypeLine(string line, float typingSpeed)
     {
         isTyping = true;
         dialogueText.text = "";
@@ -189,7 +220,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in line)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(currentDialogueData.TypingSpeed);
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;

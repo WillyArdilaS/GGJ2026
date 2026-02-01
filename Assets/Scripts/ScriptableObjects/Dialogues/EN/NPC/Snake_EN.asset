@@ -27,5 +27,5 @@ MonoBehaviour:
     - Maybe it'sss not my businesss.
     - But that ssslimy fellow and that vixen are very suspiciousss.
   npcName: Snake
-  npcPortraitPhase1: {fileID: 21300000, guid: f4de84a66b57a304782e4718589cfbf0, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 626ec47114e837347954fbee98b7e6bf, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: e4b2def0037533a46bd2ff5699bbd69e, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: e33518849aef4ba439768436cda9c0d4, type: 3}

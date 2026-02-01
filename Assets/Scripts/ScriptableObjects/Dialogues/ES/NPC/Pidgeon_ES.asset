@@ -27,5 +27,5 @@ MonoBehaviour:
     - "Oye, \xBFya descubriste qui\xE9n\u2013"
     - Uhh, brilla...
   npcName: Paloma
-  npcPortraitPhase1: {fileID: 21300000, guid: 0e1bdbe49bce7c84eab451b892fe7b15, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: d129269e4d910194b9053b525150d50d, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: 8af71be68c4861f45bb410db5640c552, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: 501e86a5284c16c40a1ce8cb9075b464, type: 3}

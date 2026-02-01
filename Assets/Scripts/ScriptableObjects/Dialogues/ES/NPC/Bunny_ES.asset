@@ -30,5 +30,5 @@ MonoBehaviour:
     - "\xBFEst\xE1 mal si te digo que lo que me preocupa en este momento es no poder
       volver a fumar?"
   npcName: Conejo
-  npcPortraitPhase1: {fileID: 21300000, guid: 6bf8051b87b58f54798c06655c92b98a, type: 3}
-  npcPortraitPhase2: {fileID: 21300000, guid: 475bd9a29b6bf0742b78e12ee56821c5, type: 3}
+  npcPortraitPhase1: {fileID: 21300000, guid: ba973884231d07b478bb5583902666b1, type: 3}
+  npcPortraitPhase2: {fileID: 21300000, guid: b83029567c912a242bdb647461526eaa, type: 3}
