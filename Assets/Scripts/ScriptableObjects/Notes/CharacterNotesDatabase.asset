@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfe89fd6a5c52545b7a67ce108f8cd0, type: 3}
+  m_Name: CharacterNotesDatabase
+  m_EditorClassIdentifier: 
+  characterNotes:
+  - familyName: Prima Catherine
+    description: "Recuerda que tu prima Catherine no se lleva muy bien con el t\xEDo
+      Ren\xE9, si puedes asegur\xE1te que no est\xE9n en la misma habitaci\xF3n."
+  - familyName: "T\xEDa Alicia"
+    description: "Sabes que la t\xEDa Alicia se pone nerviosa por todo, as\xED que
+      mant\xE9n la m\xFAsica a un volumen razonable."
+  - familyName: "Pap\xE1 (Jacobo)"
+    description: "Tu pap\xE1 va a estar entreteniendo, entonces te pongo a cargo
+      de rellenarle la pipa cuando lo necesite."
+  - familyName: "Mam\xE1 (Raquel)"
+    description: "Yo voy a estar limpiando todo el resto de la casa, pero tu habitaci\xF3n
+      es TU responsabilidad."
+  - familyName: Primo Rafael
+    description: Tu primo Rafael siempre me vacia la nevera. Intenta que nos deje
+      algo de comida.
+  - familyName: "T\xEDa Susana"
+    description: "No le prestes mucha atenci\xF3n a la t\xEDa Susana, a la gente
+      aburrida le gusta inventar chismes."
+  - familyName: Hermana Majo
+    description: Tu hermana anda de mal humor, para congraciarte con ella llevale
+      una malteada de fresa.
+  - familyName: "T\xEDo Esa\xFA"
+    description: "No te ofendas por la manera de hablar del t\xEDo Esa\xFA, se malacostumbro
+      en el ej\xE9rcito."
+  - familyName: Primo Leo
+    description: "Saca tus bloques de construcci\xF3n viejos del \xE1tico, se los
+      vamos a prestar al primo Leo."
+  - familyName: "T\xEDo Ren\xE9"
+    description: "Te pido el favor de que le eches un ojo al t\xEDo Ren\xE9 y que
+      salga \xDANICAMENTE con los objetos que entr\xF3 a la casa."
+  - familyName: "T\xEDo Benjam\xEDn"
+    description: "El t\xEDo Benjam\xEDn est\xE1 mal de la vista. Por favor asegurate
+      de que no tenga un accidente."
+  - familyName: "T\xEDo Tob\xEDas"
+    description: "El t\xEDo Tobias se puede sentir un poco solo con tantos familiares
+      de tu pap\xE1. Si quieres hacerle conversaci\xF3n hablale de baseball."
