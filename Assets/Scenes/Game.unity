@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 312907605}
   - component: {fileID: 312907606}
   - component: {fileID: 312907607}
+  - component: {fileID: 312907608}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -781,6 +782,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: d5d3c36943b1f8647bfea908d3d765a0, type: 3}
+--- !u!114 &312907608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312907599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &349813148
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +808,7 @@ GameObject:
   - component: {fileID: 349813150}
   - component: {fileID: 349813152}
   - component: {fileID: 349813153}
+  - component: {fileID: 349813154}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Untagged
@@ -946,6 +961,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: f52dd372d61d5ed4580df6abdbc527be, type: 3}
+--- !u!114 &349813154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349813148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &377751447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1294,7 @@ GameObject:
   - component: {fileID: 541097635}
   - component: {fileID: 541097634}
   - component: {fileID: 541097633}
+  - component: {fileID: 541097637}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -1418,6 +1447,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &541097637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541097631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +1980,7 @@ GameObject:
   - component: {fileID: 893865490}
   - component: {fileID: 893865489}
   - component: {fileID: 893865488}
+  - component: {fileID: 893865492}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Untagged
@@ -2090,6 +2133,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &893865492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893865486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &898333125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,6 +2567,7 @@ GameObject:
   - component: {fileID: 1119753758}
   - component: {fileID: 1119753757}
   - component: {fileID: 1119753756}
+  - component: {fileID: 1119753759}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -2663,6 +2720,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.55, y: 8.25}
   m_EdgeRadius: 0
+--- !u!114 &1119753759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119753753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1138629685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,6 +2746,7 @@ GameObject:
   - component: {fileID: 1138629691}
   - component: {fileID: 1138629688}
   - component: {fileID: 1138629687}
+  - component: {fileID: 1138629692}
   m_Layer: 0
   m_Name: Deer
   m_TagString: Untagged
@@ -2828,6 +2899,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.33, y: 11.09}
   m_EdgeRadius: 0
+--- !u!114 &1138629692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138629685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1164487056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +2978,7 @@ GameObject:
   - component: {fileID: 1191049712}
   - component: {fileID: 1191049713}
   - component: {fileID: 1191049714}
+  - component: {fileID: 1191049715}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -3046,6 +3131,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: 15bb6873d13548f4b9f31830428780fc, type: 3}
+--- !u!114 &1191049715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191049708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1233071615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,6 +3666,7 @@ GameObject:
   - component: {fileID: 1412544112}
   - component: {fileID: 1412544111}
   - component: {fileID: 1412544113}
+  - component: {fileID: 1412544114}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -3720,6 +3819,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: d63d6bf7ffb98934bbedc6e2cd968c46, type: 3}
+--- !u!114 &1412544114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412544106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1418122067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,6 +3991,7 @@ GameObject:
   - component: {fileID: 1426856962}
   - component: {fileID: 1426856961}
   - component: {fileID: 1426856964}
+  - component: {fileID: 1426856965}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -4031,6 +4144,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: 133460cfd9824554f932a109ba35242a, type: 3}
+--- !u!114 &1426856965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426856959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1458358816
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4169,7 @@ GameObject:
   - component: {fileID: 1458358819}
   - component: {fileID: 1458358823}
   - component: {fileID: 1458358824}
+  - component: {fileID: 1458358825}
   m_Layer: 0
   m_Name: DeadBody
   m_TagString: Untagged
@@ -4182,6 +4309,19 @@ MonoBehaviour:
   currentDialogueIndex: 0
   lastIndexPhase1: 0
   isBasedOnPhase: 0
+--- !u!114 &1458358825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458358816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1459342131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4550,6 +4690,7 @@ GameObject:
   - component: {fileID: 1714724149}
   - component: {fileID: 1714724148}
   - component: {fileID: 1714724147}
+  - component: {fileID: 1714724151}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -4702,6 +4843,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1714724151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714724145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1831287000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4953,6 +5107,7 @@ GameObject:
   - component: {fileID: 1843980039}
   - component: {fileID: 1843980036}
   - component: {fileID: 1843980035}
+  - component: {fileID: 1843980040}
   m_Layer: 0
   m_Name: Crow
   m_TagString: Untagged
@@ -5105,6 +5260,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.04, y: 8.41}
   m_EdgeRadius: 0
+--- !u!114 &1843980040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843980033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1850139517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,6 +5423,7 @@ GameObject:
   - component: {fileID: 1883756746}
   - component: {fileID: 1883756747}
   - component: {fileID: 1883756748}
+  - component: {fileID: 1883756749}
   m_Layer: 0
   m_Name: Pidgeon
   m_TagString: Untagged
@@ -5407,6 +5576,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: 90de1c7b7976c5343b03947d883f8612, type: 3}
+--- !u!114 &1883756749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883756740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1887422086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5472,8 +5654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df2499da53fd2148ac03d176c79f643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftArrowGroup: {fileID: 0}
-  rightArrowGroup: {fileID: 0}
+  leftArrowGroup: {fileID: 1418122072}
+  rightArrowGroup: {fileID: 2042964172}
   activationMargin: 40
   fadeSpeed: 15
 --- !u!1 &1893566088
@@ -5908,6 +6090,7 @@ GameObject:
   - component: {fileID: 2096308157}
   - component: {fileID: 2096308156}
   - component: {fileID: 2096308155}
+  - component: {fileID: 2096308159}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -6060,6 +6243,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2096308159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096308153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &2118731553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,6 +6269,7 @@ GameObject:
   - component: {fileID: 2118731555}
   - component: {fileID: 2118731557}
   - component: {fileID: 2118731558}
+  - component: {fileID: 2118731559}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -6225,6 +6422,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePhase2: {fileID: 21300000, guid: 6cfacd583ce172c4cbc6f0ea52d6ce00, type: 3}
+--- !u!114 &2118731559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118731553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd4aafb9e73b954c8265b7f38d548f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.85, g: 0.5, b: 0.5, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
